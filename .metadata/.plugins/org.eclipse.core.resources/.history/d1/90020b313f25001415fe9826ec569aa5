@@ -1,5 +1,5 @@
 package crorepathi;
-
+<<<<<<< HEAD
 /*
 Question class with question, level and correctAnswer as protected instance variables.
 Provide the following methods in the Question class.
@@ -30,4 +30,9 @@ public class Question {
 	public String getCorrectAnswer(){
 		return this.correctAnswer;
 	}
+=======
+
+public class Question {
+
+>>>>>>> c8eab1eb72848f9c64e266faa0c4b8c9daeae320
 }

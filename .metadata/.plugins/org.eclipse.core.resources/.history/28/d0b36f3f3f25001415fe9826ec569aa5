@@ -1,5 +1,5 @@
 package crorepathi;
-
+<<<<<<< HEAD
 /*
 Question class with question, level and correctAnswer as protected instance variables.
 Provide the following methods in the Question class.

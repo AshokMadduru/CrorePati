@@ -9,5 +9,17 @@ Provide the following methods in the Participant class.
 	*/
 public class Participant {
 
+	private String name,phone;
+	private int age,currentLevel,prizeMoney;
 	
+	public String getName(){
+		return this.name;
+	}
+	
+	public int getAge(){
+		return this.age;
+	}
+	public String getPhone(){
+		return this.phone;
+	}
 }
