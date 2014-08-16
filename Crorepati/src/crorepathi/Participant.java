@@ -12,7 +12,7 @@ Provide the following methods in the Participant class.
 	
 	@SuppressWarnings("unused")
 	private String name="",phone_num="",friend_num="";
-	private int age;
+	private int age,prizemoney;
 	
 	public String getName()
 	{
@@ -24,7 +24,16 @@ Provide the following methods in the Participant class.
 	public String getPhone(){
 		return phone_num;
 	}
-public int Prize(int level){
+	
+	Participant(String name, String phone, int age)
+	{
+		this.name = name;
+		this.phone_num = "";
+		this.friend_num = phone;
+		this.age = age;
+	}
+	
+	public int prize(int level){
 	switch (level){
 	case 1:
 		return 1000;
@@ -59,4 +68,8 @@ public int Prize(int level){
 	}
 	return 0;	
 }
+
+public int getPrizemoney()
+{
+	return prizemoney;
 }
