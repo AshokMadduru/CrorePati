@@ -127,7 +127,10 @@ public class KaunBanegaCrorepati implements Quiz{
 	@Override
 	public Participant registerParticipant(String name, int age, String phone) {
 		// TODO Auto-generated method stub
-		return null;
+		
+		Participant pr = new Participant(name,phone,age);
+		
+		return pr;
 	}
 
 	@Override
