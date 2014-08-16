@@ -116,4 +116,43 @@ int getPrizeMoney();
 
 public class KaunBanegaCrorepati implements Quiz{
 
+	@Override
+	public void addQuestion(Question q) {
+		// TODO Auto-generated method stub
+		
+		//hai
+		
+	}
+
+	@Override
+	public Participant registerParticipant(String name, int age, String phone) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getCurrentLevel() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Question getNextQuestion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean lockAnswer(Question q, String answer) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int getPrizeMoney() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
 }
