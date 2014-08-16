@@ -119,7 +119,9 @@ public class KaunBanega implements Quiz{
 	@Override
 	public void addQuestion(Question q) {
 		// TODO Auto-generated method stub
-		q question=new q();
+		int level=q.getLevel();
+		
+		q.getCorrectAnswer();
 		
 	}
 

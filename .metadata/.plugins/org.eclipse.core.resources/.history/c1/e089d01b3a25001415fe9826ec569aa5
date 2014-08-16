@@ -119,14 +119,12 @@ public class KaunBanega implements Quiz{
 	@Override
 	public void addQuestion(Question q) {
 		// TODO Auto-generated method stub
-		q question=new q();
 		
 	}
 
 	@Override
 	public Participant registerParticipant(String name, int age, String phone) {
 		// TODO Auto-generated method stub
-		
 		return null;
 	}
 
