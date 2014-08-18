@@ -1,0 +1,13 @@
+diff a/Crorepati/src/crorepathi/KaunBanegaCrorepati.java b/Crorepati/src/crorepathi/KaunBanegaCrorepati.java	(rejected hunks)
+@@ -127,7 +127,10 @@
+ 	@Override
+ 	public Participant registerParticipant(String name, int age, String phone) {
+ 		// TODO Auto-generated method stub
+-		return null;
++		
++		Participant pr = new Participant(name,phone,age);
++		
++		return pr;
+ 	}
+ 
+ 	@Override

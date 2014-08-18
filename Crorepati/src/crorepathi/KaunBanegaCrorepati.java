@@ -1,4 +1,6 @@
-package crorepathi;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
 
 /*
 
@@ -128,34 +130,104 @@ public class KaunBanegaCrorepati implements Quiz{
 	public Participant registerParticipant(String name, int age, String phone) {
 		// TODO Auto-generated method stub
 		
-		Participant pr = new Participant(name,phone,age);
-		
-		return pr;
+		Participant p = new Participant(name,phone,age);
+		return p;
 	}
 
 	@Override
 	public int getCurrentLevel() {
 		// TODO Auto-generated method stub
-		return 0;
+		return level;
 	}
 
 	@Override
 	public Question getNextQuestion() {
 		// TODO Auto-generated method stub
-		return null;
+		int level = getCurrentLevel();
+		
+		Question q = questions[level-1];
+		return q;
 	}
 
 	@Override
 	public boolean lockAnswer(Question q, String answer) {
 		// TODO Auto-generated method stub
-		return false;
+		if(q.getCorrectAnswer().equals(answer))
+			return true;
+		else
+			return false;
 	}
 
 	@Override
 	public int getPrizeMoney() {
 		// TODO Auto-generated method stub
-		return 0;
+		return pr.getPrizemoney();
 	}
 
+	public static void main(String[] args) throws Exception
+	{
+		KaunBanegaCrorepati kbc = new KaunBanegaCrorepati();
+		Scanner sc = new Scanner(new File("list.txt"));
+		for(int i=0;i<15;i++)
+		{
+			
+			String qstn = sc.nextLine();
+			//System.out.println("Enter the answer: ");
+			String answer = sc.nextLine();
+			Question qs = new Question(qstn,level,answer);
+			kbc.addQuestion(qs);
+			level++;
+		}
+		
+		
+		System.out.println("Enter the participant name: ");
+		String name = scan.nextLine();
+		System.out.println("Enter the friend's phone number: ");
+		String phone = scan.nextLine();
+		System.out.println("Enter the participant age: ");
+		int age = scan.nextInt();
+		//scan.next();
+		
+		pr = kbc.registerParticipant(name,age,phone);
+		level = 0;
+		
+		while(true)
+		{
+			level++;
+			Question qstn = kbc.getNextQuestion();
+			System.out.println("LEVEL "+level);
+			System.out.println(qstn.getQuestion());
+			
+			System.out.println("Enter your answer: ");
+			String ans = scan.next();
+			if(!ans.equals("quit"))
+			{	
+				if(kbc.lockAnswer(qstn,ans))
+					pr.setPrizemoney(pr.prize(level));
+				else
+				{
+					if(level<=5)
+						pr.setPrizemoney(0);
+					else if(level<=10)
+						pr.setPrizemoney(pr.prize(6));
+					else
+						pr.setPrizemoney(pr.prize(11));
+					System.out.println("Prize money is "+kbc.getPrizeMoney());
+					System.exit(0);
+				}
+			}
+			else
+			{
+				System.out.println("Prize money is "+kbc.getPrizeMoney());
+				System.exit(0);
+			}
+			if(level == 15)
+			{
+				System.out.println(pr.getName()+"won 1 crore");
+				System.exit(0);
+			}
+		}
+		
+	}
 
 }

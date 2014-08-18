@@ -1,18 +1,21 @@
-package crorepathi;
 
-public class Participant {
-	// The quiz begins with the registration of the participant
-		// Participant name, age in years, phone number and friend's phone number are the parameters
-		// an instance of the participant should be created and returned
-	/*Participant class with name, age, phone, currentLevel and prizeMoney as private instance variables.
+
+/*
+Participant class with name, age, phone, currentLevel and prizeMoney as private instance variables.
 Provide the following methods in the Participant class.
 	public String getName() - returns the name of the participant
 	public int getAge() - returns the age of the participant
-	public String getPhone() - returns the phone of the participant*/
+*/
+class Participant{
 	
 	@SuppressWarnings("unused")
 	private String name="",phone_num="",friend_num="";
 	private int age,prizemoney;
+	
+	public void setPrizeMoney(int prize)
+	{
+		this.setPrizemoney(prize);
+	}
 	
 	public String getName()
 	{
@@ -22,7 +25,7 @@ Provide the following methods in the Participant class.
 		return age;
 	}
 	public String getPhone(){
-		return phone_num;
+		return friend_num;
 	}
 	
 	Participant(String name, String phone, int age)
@@ -72,4 +75,9 @@ Provide the following methods in the Participant class.
 public int getPrizemoney()
 {
 	return prizemoney;
+}
+
+public void setPrizemoney(int prizemoney) {
+	this.prizemoney = prizemoney;
+}
 }
