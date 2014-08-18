@@ -1,10 +1,14 @@
 
 
-/*
-Participant class with name, age, phone, currentLevel and prizeMoney as private instance variables.
+public class Participant {
+	// The quiz begins with the registration of the participant
+		// Participant name, age in years, phone number and friend's phone number are the parameters
+		// an instance of the participant should be created and returned
+	/*Participant class with name, age, phone, currentLevel and prizeMoney as private instance variables.
 Provide the following methods in the Participant class.
 	public String getName() - returns the name of the participant
 	public int getAge() - returns the age of the participant
+<<<<<<< HEAD
 */
 class Participant{
 	
@@ -37,6 +41,25 @@ class Participant{
 	}
 	
 	public int prize(int level){
+=======
+	public String getPhone() - returns the phone of the participant*/
+	
+	@SuppressWarnings("unused")
+	private String name="",phone_num="",friend_num="";
+	private int age;
+	
+	public String getName()
+	{
+		return name;
+	}
+	public int getAge(){
+		return age;
+	}
+	public String getPhone(){
+		return phone_num;
+	}
+public int Prize(int level){
+>>>>>>> e409fcce98b5d021a68f6705c696d8e73fef38d9
 	switch (level){
 	case 1:
 		return 1000;
@@ -71,6 +94,7 @@ class Participant{
 	}
 	return 0;	
 }
+<<<<<<< HEAD
 
 public int getPrizemoney()
 {
@@ -80,4 +104,6 @@ public int getPrizemoney()
 public void setPrizemoney(int prizemoney) {
 	this.prizemoney = prizemoney;
 }
+=======
+>>>>>>> e409fcce98b5d021a68f6705c696d8e73fef38d9
 }

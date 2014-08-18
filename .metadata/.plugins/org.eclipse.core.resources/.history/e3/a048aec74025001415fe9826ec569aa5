@@ -1,4 +1,4 @@
-
+package crorepathi;
 
 /*
 Question class with question, level and correctAnswer as protected instance variables.
@@ -19,7 +19,7 @@ public class Question {
 	}
 	
 	
-	public String getQuestion(){
+	 String getQuestion(){
 		return this.question;
 	}
 	
